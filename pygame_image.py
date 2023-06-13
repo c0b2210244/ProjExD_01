@@ -8,7 +8,9 @@ def main():
     clock  = pg.time.Clock()
     bg_img = pg.image.load("ex01/fig/pg_bg.jpg")
     koukaton_img = pg.image.load("ex01/fig/3.png")
-    pg.transform.flip(koukaton_img, True, False)
+    koukaton_1 = pg.transform.flip(koukaton_img, True, False)
+    koukaton_2 = pg.transform.rotate(koukaton_1, 10)
+    koukaton_list = [koukaton_1, koukaton_2]
     tmr = 0
     while True:
         for event in pg.event.get():
